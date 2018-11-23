@@ -1,0 +1,214 @@
+body {
+  background:gray;
+  background-image: url("https://www.transparenttextures.com/patterns/brushed-alum.png");
+}
+
+#content-sim {
+  width: 100%;
+  /*border: 1px solid lightgray;*/
+} 
+
+#stage_scale {
+    position: relative;
+    width: 100%;
+    display: block;
+    height: 0;
+    top: 0;
+    left: 0;
+    opacity:0;
+   transition:opacity 2s ease-in-out;
+  transition-delay: 2s;
+}
+
+#stage {
+   position: relative;
+    display: inline-block;
+    width: 100%;
+    height: auto;
+    /*margin: 2em auto 1em 50%;*/
+    margin-left: 50%;
+    -webkit-perspective: 1200px;
+    -webkit-perspective-origin: 0 50%;
+    margin-top: auto;
+   transform-origin: center;
+   transform: translateY(-9%);
+}
+  
+#stage_position {
+    /* transform-origin: center; */
+    transform: translateZ(-1200px);
+    transform-style: preserve-3d;
+}
+ 
+#gijt_rotator {
+    -webkit-transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d;
+    -webkit-animation-timing-function: cubic-bezier(1, 0.2, 0.2, 1);
+    -webkit-animation-duration: 3s;
+    -webkit-animation-delay: 1s;
+    -webkit-transition: all 2s ease;  
+    -moz-transition: all 2s ease;  
+    -o-transition: all 2s ease;  
+    -ms-transition: all 2s ease;  
+    transition: all 2s ease;
+    transform: scale3d(.872,.872,.872);
+}
+
+#gijt_rotator:hover {
+  -webkit-animation-play-state: paused;
+}
+
+#gijt-button-wrap {
+position: absolute;
+    width: 1000px;
+    margin: 0 auto;
+    left: 0%;
+    top: 85%;
+  transform: translateX(-50%);
+}
+
+#gijt-button-wrap button {
+        background: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.1);
+    width: 75px;
+    position: absolute;
+    bottom: 0;
+    right: 17%;
+    border: 1px outset rgba(222, 222, 222, 0.09);
+    border-radius: 10px;
+    padding: .5em;
+    z-index: 100001;
+    font-size: x-large;
+}
+ 
+.gijt-btnL {
+  left: 17%
+}
+
+.gijt-btnL:hover, .gijt-btnR:hover {
+  color: rgba(255, 255, 255, 0.4) !important;
+  background: rgba(255, 255, 255, .1) !important;
+}
+
+#gijt_rotator .gijt_spoke {
+  position: absolute;
+ left: -500px;
+}
+
+#gijt_rotator .gijt_panel {
+  padding: 0px;
+  border: 1px solid #ccc;
+  background: #fff;
+  position: fixed;
+}
+
+.gijt_panel {
+    box-sizing: border-box;
+    width: 250px;
+    height: 150px;
+    overflow: hidden;
+    text-align: center;
+    font-size: 200px;
+    line-height: 2em;
+    color: hsl(0, 0%, 29%);
+    font-weight: 700;
+   padding:.2em !important;
+    text-shadow: 1px 1px 0px hsla(0, 0%, 100%, 0.3), -1px -1px 0 rgba(0, 0, 0, 0.45);
+    box-shadow: inset 0 0 -50px -5px white;
+    font-variant: all-small-caps;
+    letter-spacing: .5em;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+    -o-transition: all 2s ease;
+    -ms-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.gijt_panel image {
+    width: 100%;
+    height: auto;
+}
+
+.panelNumber1 {
+  -webkit-transform: rotateY(-90deg) translateZ(1200px);
+}
+.panelNumber2  {
+  -webkit-transform: rotateY(-45deg) translateZ(1200px);
+}
+.panelNumber3 {
+  -webkit-transform: rotateY(-0deg) translateZ(1200px);
+}
+.panelNumber4 {
+  -webkit-transform: rotateY(45deg) translateZ(1200px);
+}
+.panelNumber5 {
+  -webkit-transform: rotateY(90deg) translateZ(1200px);  
+}
+.panelNumber6 {
+  -webkit-transform: rotateY(135deg) translateZ(1200px);
+}
+.panelNumber7 {
+  -webkit-transform: rotateY(180deg) translateZ(1200px);
+}
+.panelNumber8 {
+  -webkit-transform: rotateY(225deg) translateZ(1200px) ;
+}
+
+#gijt_rotator .gijt_spokepoke:nth-of-type(n+9) { display: none; 
+}
+
+
+/*__________________________
+  
+  Shadow
+____________________________*/
+
+.drop-shadow {
+    -webkit-box-shadow: 0px 59px 69px -39px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 59px 69px -39px rgba(0,0,0,0.97);
+    box-shadow: 0px 59px 69px -39px rgba(0, 0, 0, 0.97);
+    position: absolute;
+    top: 0;
+    width: 18%;
+    height: 80%;
+    left: 50%;
+    transform: translatex(-50%);
+  z-index:-1;
+}
+
+  
+/*__________________________
+
+  Alternate Button Designs
+____________________________*/
+  
+.dark-metal {
+    position: absolute;
+    width: 714px !important;
+    margin: 0 auto;
+    left: 0%;
+    top: 89% !important;
+    transform: translateX(-50%);
+    background: #383838;
+    height: 35px;
+    border: 1px outset rgba(19, 18, 18, 0.59);
+    border-radius: 10px;
+    background: #4c4c4c;
+    background: -moz-linear-gradient(to bottom, #4c4c4c 0%,#595959 5%,#666666 15%,#474747 25%,#2c2c2c 35%,#2b2b2b 45%,#1c1c1c 55%,#1b1b1b 60%,#111111 79%,#111111 100%);
+    background: -webkit-linear-gradient(to bottom, #4c4c4c 0%,#595959 5%,#666666 15%,#474747 33%,#2c2c2c 55%,#2b2b2b 75%,#1c1c1c 85%,#1b1b1b 93%,#111111 99%,#111111 100%);
+    background: linear-gradient(to bottom, #4c4c4c 0%,#595959 5%,#666666 15%,#474747 25%,#2c2c2c 35%,#2b2b2b 50%,#1c1c1c 65%,#1b1b1b 75%,#111111 90%,#111111 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4c4c4c', endColorstr='#131313',GradientType=0 );
+}
+
+#gijt-button-wrap.dark-metal button {
+    right: 0;
+    background: rgba(255, 255, 255, 0);
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 14px;
+    letter-spacing: .25rem;
+    font-weight: 900;
+}
+
+#gijt-button-wrap.dark-metal .gijt-btnL {
+  left: 0%
+} 
